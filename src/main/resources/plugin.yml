@@ -1,0 +1,9 @@
+name: CraftArrows
+api-version: 1.13
+version: 1.5.0
+description: An updated version of CraftArrows
+main: io.github.dailystruggle.craftarrows.CraftArrows
+softdepend: [Citizens, WorldGuard]
+commands:
+  ca:
+    description: Access to CraftArrows Commands

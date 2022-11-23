@@ -1,0 +1,878 @@
+##################
+# ArrowEffects.yml
+#   - Configure recipes and arrow effects here
+#
+#   NOTE: CHANGING THE NAME OF AN ARROW WILL BREAK OLD ARROWS OF THAT TYPE - BE SURE TO CONFIGURE BEFORE LAUNCHING ON PRODUCTION SERVER
+#
+# Recipes
+#   ArrowId:
+#     Enabled: (true/false) - Do you want this to have effect on your server
+#     Craftable: (true/false) - Do you want the arrow to be craftable?
+#     Name: (string) - The arrows name as it appears ingame on the item (takes color code)
+#     Desc: (string) - The lore displayed on the item
+#     Amount: (number) - The number of arrows created by the recipe
+#     ShapeChars: (list of letters) - The characters used in the shape of the recipe
+#     CharMats: (list of materials) - The materials that match the characters in ShapeChars (must have same number of values as ShapeChars)
+#     Shape-1: Top line of recipe in crafting table
+#     Shape-2: Middle line of recipe in crafting table
+#     Shape-3: Bottom line of recipe in crafting table
+#
+#   Potion specific options
+#     Duration: (number) - duration in ticks the effect lasts (20 ticks = 1 second)
+#     Power: (number) - effect level (0 = level 1, 1 = level 2, etc)
+#
+#
+
+Recipes:
+  Bat:
+    Enabled: true
+    Craftable: true
+    Name: Bat Arrow
+    Desc: Fires a vicious bat at the target!
+    Speed: 1.0
+    Damage: 6.0
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - LEATHER
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: CBC
+    Shape-3: CDC
+  Blinding:
+    Enabled: true
+    Craftable: true
+    Name: Blinding Arrow
+    Desc: Blinds your target
+    Duration: 45
+    Power: 0
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - ROTTEN_FLESH
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  BlindingAoe:
+    Enabled: true
+    Craftable: true
+    Name: Blinding Burst Arrow
+    Desc: Blinds multiple targets
+    Duration: 45
+    Power: 0
+    Amount: 1
+    Radius: 2
+    Color: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    CharMats:
+    - ROTTEN_FLESH
+    - STICK
+    - FEATHER
+    Shape-1: AAA
+    Shape-2: BBB
+    Shape-3: CCC
+  Blood:
+    Enabled: true
+    Craftable: true
+    Name: Blood Arrow
+    Desc: Deals damage and heals you
+    HealPower: 6
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - BONE
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  Confusion:
+    Enabled: true
+    Craftable: true
+    Name: Confusion Arrow
+    Desc: Confuses target
+    Duration: 160
+    Power: 0
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    - E
+    CharMats:
+    - RED_MUSHROOM
+    - STICK
+    - BROWN_MUSHROOM
+    - FEATHER
+    - AIR
+    Shape-1: CAC
+    Shape-2: EBE
+    Shape-3: EDE
+  ConfusionAoe:
+    Enabled: true
+    Craftable: true
+    Name: Confusion Burst Arrow
+    Desc: Confuses multiple targets
+    Duration: 160
+    Power: 0
+    Amount: 1
+    Radius: 2
+    Color: 4
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - RED_MUSHROOM
+    - STICK
+    - BROWN_MUSHROOM
+    - FEATHER
+    Shape-1: CAC
+    Shape-2: ABA
+    Shape-3: DDD
+  Cooling:
+    Enabled: true
+    Craftable: true
+    Name: Cooling Arrow
+    Desc: Turn lava to obsidian!
+    Amount: 1
+    CleanUp: true
+    CleanUpDelay: 600
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - SNOW_BLOCK
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  Crippling:
+    Enabled: true
+    Craftable: true
+    Name: Crippling Arrow
+    Desc: Slows down target
+    Duration: 60
+    Power: 2
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - FEATHER
+    - STICK
+    - SNOWBALL
+    - AIR
+    Shape-1: CCC
+    Shape-2: DBD
+    Shape-3: DAD
+  CripplingAoe:
+    Enabled: true
+    Craftable: true
+    Name: Crippling Burst Arrow
+    Desc: Slows down multiple targets
+    Duration: 60
+    Power: 2
+    Amount: 1
+    Radius: 2
+    Color: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    CharMats:
+    - FEATHER
+    - STICK
+    - SNOWBALL
+    Shape-1: CCC
+    Shape-2: BBB
+    Shape-3: AAA
+  Explosive:
+    Enabled: true
+    Craftable: true
+    Name: Explosive Arrow
+    Desc: Create an explosion
+    Power: 4
+    Amount: 1
+    BreakBlocks: true
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - TNT
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  Fire:
+    Enabled: true
+    Craftable: true
+    Name: Fire Arrow
+    Desc: Set your enemy alight
+    Duration: 60
+    BurnBlocks: true
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - FIRE_CHARGE
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  Forcefield:
+    Enabled: true
+    Craftable: true
+    Name: Forcefield Arrow
+    Desc: Pushes enemies away
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - IRON_BARS
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: AAA
+    Shape-2: DBD
+    Shape-3: DCD
+  Homing:
+    Enabled: true
+    Craftable: true
+    Name: Homing Arrow
+    Desc: Arrow homes in on enemies
+    Velocity: 1.0
+    Damage: 5.0
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    CharMats:
+    - SHULKER_SHELL
+    - ARROW
+    - AIR
+    Shape-1: CAC
+    Shape-2: CBC
+    Shape-3: CCC
+  Ice:
+    Enabled: true
+    Craftable: true
+    Name: Ice Arrow
+    Desc: Turn water to ice!
+    Amount: 1
+    CleanUpIce: true
+    CleanUpIceDelay: 600
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    - E
+    CharMats:
+    - WATER_BUCKET
+    - SNOWBALL
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: BAB
+    Shape-2: ECE
+    Shape-3: EDE
+  JackO:
+    Enabled: true
+    Craftable: true
+    Name: Jack O' Arrow
+    Desc: Super spooky arrow that changes a targets helmet to a jack o lantern! Or places the block on landing
+    PlaceBlock: true
+    Damage: 3.0
+    ChangeHelmet: true
+    DropPreviousHelmet: false
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    CharMats:
+    - JACK_O_LANTERN
+    - ARROW
+    - AIR
+    Shape-1: CAC
+    Shape-2: CBC
+    Shape-3: CCC
+  Ladder:
+    Enabled: true
+    Craftable: true
+    Name: Ladder Arrow
+    Desc: Places ladders traveling down the block you hit!
+    PlacementDelay: 2
+    ParticleOnPlacement: SMOKE_NORMAL
+    MaxLength: 8
+    MaxOffset: 1
+    OnlyForwards: true
+    PlaceInAir: true
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    CharMats:
+    - LADDER
+    - ARROW
+    Shape-1: AAA
+    Shape-2: ABA
+    Shape-3: AAA
+  Lance:
+    Enabled: true
+    Craftable: true
+    Name: Lance Arrow
+    Desc: Pierce through your enemies!
+    PierceDistance: 5
+    TargetDamage: 6
+    PierceDamage: 3
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    CharMats:
+    - STONE_SWORD
+    - ARROW
+    - AIR
+    Shape-1: CAC
+    Shape-2: CBC
+    Shape-3: CCC
+  Levitation:
+    Enabled: true
+    Craftable: true
+    Name: Levitation Arrow
+    Desc: Make your enemy fly to their doom!
+    Duration: 40
+    Power: 0
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    CharMats:
+    - FEATHER
+    - ARROW
+    - AIR
+    Shape-1: CAC
+    Shape-2: CBC
+    Shape-3: CAC
+  LevitationAoe:
+    Enabled: true
+    Craftable: true
+    Name: Levitation Burst Arrow
+    Desc: Make all your enemies fly to their doom!
+    Duration: 40
+    Power: 0
+    Radius: 2
+    Color: 1
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    CharMats:
+    - FEATHER
+    - ARROW
+    Shape-1: AAA
+    Shape-2: BBB
+    Shape-3: AAA
+  Lightning:
+    Enabled: true
+    Craftable: true
+    Name: Lightning Arrow
+    Desc: Strike down lightning
+    Count: 2
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - BLAZE_ROD
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  Medic:
+    Enabled: true
+    Craftable: true
+    Name: Medical Arrow
+    Desc: Provide healing
+    Amount: 1
+    HealPower: 8
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - GOLDEN_CARROT
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  Multishot:
+    Enabled: true
+    Craftable: true
+    Name: Multishot Arrow
+    Desc: Fire multiple arrows
+    Amount: 1
+    ArrowCount: 3
+    DelayBetweenShots: 4
+    RemoveOnLand: true
+    ShapeChars:
+    - A
+    - B
+    CharMats:
+    - ARROW
+    - AIR
+    Shape-1: BAB
+    Shape-2: BAB
+    Shape-3: BAB
+  Net:
+    Enabled: true
+    Craftable: true
+    Name: Net Arrow
+    Desc: Immobilize your target
+    Amount: 1
+    CleanUpWebs: true
+    CleanUpWebsDelay: 100
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - SLIME_BALL
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  Piercing:
+    Enabled: true
+    Craftable: true
+    Name: Piercing Arrow
+    Desc: Deals bonus damage to armored targets
+    BonusDamage: 4
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - IRON_INGOT
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  Poison:
+    Enabled: true
+    Craftable: true
+    Name: Poison Arrow
+    Desc: Poison your target
+    Duration: 100
+    Power: 0
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - SPIDER_EYE
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  Pull:
+    Enabled: true
+    Craftable: true
+    Name: Pull Arrow
+    Desc: Pulls target to you
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - STRING
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: AAA
+    Shape-2: DBD
+    Shape-3: DCD
+  Push:
+    Enabled: true
+    Craftable: true
+    Name: FUS RO DAH Arrow
+    Desc: Push enemies away
+    Power: 2
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - BRICK
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: AAA
+    Shape-2: DBD
+    Shape-3: DCD
+  Razor:
+    Enabled: true
+    Craftable: true
+    Name: Razor Arrow
+    Desc: Deals bonus damage to unarmored targets
+    BonusDamage: 4
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - GLASS
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  Shuffle:
+    Enabled: true
+    Craftable: true
+    Name: Shuffle Arrow
+    Desc: Switch position with your target
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - ENDER_PEARL
+    - FEATHER
+    - STICK
+    - AIR
+    Shape-1: DAD
+    Shape-2: DCD
+    Shape-3: DBD
+  Sniper:
+    Enabled: true
+    Craftable: true
+    Name: Sniper Arrow
+    Desc: Arrow flies true and fast
+    VelocityMultiplier: 2.0
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    CharMats:
+    - ARROW
+    - GUNPOWDER
+    - AIR
+    Shape-1: CCC
+    Shape-2: CAC
+    Shape-3: BBB
+  Sound:
+    Enabled: true
+    Craftable: true
+    Name: Sound Arrow
+    Desc: Scare your enemies away
+    Amount: 1
+    Range: -1
+    Sounds:
+    - ENTITY_ENDERDRAGON_DEATH
+    - ENTITY_ENDERMEN_SCREAM
+    - ENTITY_BAT_TAKEOFF
+    - ENTITY_GHAST_SCREAM
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - NOTE_BLOCK
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  Teleport:
+    Enabled: true
+    Craftable: true
+    Name: Teleport Arrow
+    Desc: Teleports you to your arrow
+    Amount: 1
+    DamageTaken: 1.0
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - FEATHER
+    - STICK
+    - BOOK
+    - AIR
+    Shape-1: DCD
+    Shape-2: DBD
+    Shape-3: DAD
+  Torpedo:
+    Enabled: true
+    Craftable: true
+    Name: Torpedo Arrow
+    Desc: Fires an arrow which travels through water like a torpedo!
+    Amount: 1
+    AirGravity: true
+    WaterGravity: false
+    MinSpeed: 0.2
+    MaxSpeed: 1.0
+    AddedAirGravity: 0.1
+    Damage: 6.0
+    ShapeChars:
+    - A
+    - B
+    - C
+    CharMats:
+    - ARROW
+    - GUNPOWDER
+    - AIR
+    Shape-1: CAC
+    Shape-2: CAC
+    Shape-3: BCB
+  TrickOrTreat:
+    Enabled: true
+    Craftable: true
+    Name: Trick or Treat Arrow
+    Desc: Heal your targets health and hunger or remove it!
+    Amount: 1
+    Trick:
+      Chance: 30.0
+      Damage: 6.0
+      Hunger: -6
+    Treat:
+      Health: 4.0
+      Hunger: 4
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - PUMPKIN
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  Torch:
+    Enabled: true
+    Craftable: true
+    Name: Torch Arrow
+    Desc: Light up your surroundings
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - TORCH
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  Volley:
+    Enabled: true
+    Craftable: true
+    Name: Volley Arrow
+    Desc: Rain hell on your enemies!
+    Amount: 1
+    ArrowCount: 9
+    ArrowSpread: 12
+    RemoveOnLand: true
+    ShapeChars:
+    - A
+    CharMats:
+    - ARROW
+    Shape-1: AAA
+    Shape-2: AAA
+    Shape-3: AAA
+  Vortex:
+    Enabled: true
+    Craftable: true
+    Name: Vortex Arrow
+    Desc: Sucks enemies into the vortex
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - ENDER_EYE
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  Walling:
+    Enabled: true
+    Craftable: true
+    Name: Walling Arrow
+    Desc: Creates a wall!
+    Amount: 1
+    CleanUp: true
+    CleanUpDelay: 100
+    Blocks:
+    - STONE
+    - DIRT
+    - COBBLESTONE
+    Wall:
+      Width: 5 #left to right
+      Length: 2 #back to front
+      Height: 3 #bottom to top
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    - E
+    CharMats:
+    - STONE
+    - DIRT
+    - COBBLESTONE
+    - ARROW
+    - AIR
+    Shape-1: ABC
+    Shape-2: ABC
+    Shape-3: EDE
+  Water:
+    Enabled: true
+    Craftable: true
+    Name: Water Arrow
+    Desc: Flush away your enemies
+    Amount: 1
+    CleanUpWater: true
+    CleanUpWaterDelay: 100
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - WATER_BUCKET
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
+  Weakness:
+    Enabled: true
+    Craftable: true
+    Name: Weakness Arrow
+    Desc: Weaken foes
+    Duration: 140
+    Power: 1
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - STICK
+    - FEATHER
+    - CACTUS
+    - AIR
+    Shape-1: CCC
+    Shape-2: DAD
+    Shape-3: DBD
+  Wither:
+    Enabled: true
+    Craftable: true
+    Name: Wither Arrow
+    Desc: Shoot a Witherskull
+    BreakBlocks: false
+    Amount: 1
+    ShapeChars:
+    - A
+    - B
+    - C
+    - D
+    CharMats:
+    - WITHER_SKELETON_SKULL
+    - STICK
+    - FEATHER
+    - AIR
+    Shape-1: DAD
+    Shape-2: DBD
+    Shape-3: DCD
